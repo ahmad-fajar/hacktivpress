@@ -13,8 +13,9 @@ router.get('/', articleCtrl.viewAll);
 // by id
 router.get('/:id', articleCtrl.viewOne);
 // by author
-// router.get('/author/:id', articleCtrl.viewByAuthor)
-router.get('/author:q', articleCtrl.viewByAuthor)
+router.get('/author/:authorUserName', articleCtrl.viewByAuthor)
+// by category
+router.get('/category/:category', articleCtrl.viewByCategory)
 
 // update
 router.put('/:id', articleCtrl.articleUpdate);

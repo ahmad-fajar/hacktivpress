@@ -1,6 +1,7 @@
 'use strict'
 
 const Article = require('../models/article');
+const User = require('../models/user');
 
 
 // create
@@ -50,14 +51,16 @@ exports.viewOne = (req, res) => {
 
 // view by author
 exports.viewByAuthor = (req, res) => {
-  Article.find({
-    author : req.params.id
+  User.find({
+    username : req.params.authorUserName
   })
-  .then(article => {
-    res.send(article)
-  })
-  .catch(e => {
-    res.status(500).send(article)
+  .then(user => {
+    Article.find({
+      author: user
+    })
+    .then(articles => {
+      res.send(articles)
+    })
   })
 }
 
@@ -66,7 +69,7 @@ exports.viewByCategory = (req, res) => {
   Article.find({
     category : req.params.category
   })
-  .populate('users', 'username')
+  .populate('author', 'username')
   .exec()
   .then(article => {
     res.send(article)

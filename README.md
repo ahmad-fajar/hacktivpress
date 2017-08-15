@@ -22,5 +22,5 @@ App ini dibuat sebagai bagian dari pembelajaran di Hacktiv8.
 |`/articles:id`  | GET        | Get / view spesific article |
 |`/articles:id`  | PUT        | Edit article (authenticated user only) |
 |`/articles:id`  | DELETE     | Delete article (authenticated user only) |
-|`/author?q=:id` | GET        | View by author |
-|`/category?q=:id` | GET      | View article by category |
+|`/author/:authorUserName` | GET        | View by author |
+|`/category/:category` | GET      | View article by category |
