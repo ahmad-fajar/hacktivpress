@@ -16,3 +16,15 @@ exports.createUser = (req, res) => {
     res.status(500).send(e)
   })
 }
+
+
+// view all user
+exports.viewAll = (req, res) => {
+  User.find()
+  .then(users => {
+    res.send(users)
+  })
+  .catch(e => {
+    res.status(500).send(e)
+  })
+}

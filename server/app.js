@@ -20,7 +20,7 @@ const user = require('./routes/user');
 const article = require('./routes/article');
 
 app.use('/', index);
-// app.use('/user', user);
+app.use('/user', user);
 app.use('/article', article);
 
 

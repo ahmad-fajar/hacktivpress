@@ -15,7 +15,7 @@ App ini dibuat sebagai bagian dari pembelajaran di Hacktiv8.
 ### API Routes
 |   ***Route***  | ***HTTP*** | ***Description***              |
 |----------------|:----------:|--------------------------------|
-|`/signup`       | POST       | Sign up with new user info |
+|`/user`         | POST       | Sign up (create new user) |
 |`/signin`       | POST       | Sign in while get an access token based on credentials |
 |`/articles`     | GET        | Get all articles |
 |`/articles`     | POST       | Post new article |
