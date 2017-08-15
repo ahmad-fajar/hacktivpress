@@ -15,12 +15,12 @@ App ini dibuat sebagai bagian dari pembelajaran di Hacktiv8.
 ### API Routes
 |   ***Route***  | ***HTTP*** | ***Description***              |
 |----------------|:----------:|--------------------------------|
-|`/api/signup`   | POST       | Sign up with new user info |
-|`/api/signin`   | POST       | Sign in while get an access token based on credentials |
-|`/api/articles` | GET        | Get all articles |
-|`/api/articles` | POST       | Post new article |
-|`/api/articles:id` | GET     | Get / view spesific article |
-|`/api/articles:id` | PUT     | Edit article (authenticated user only) |
-|`/api/articles:id` | DELETE  | Delete article (authenticated user only) |
-|`/api/author?q=:id` | GET  | View by author |
-|`/api/category?q=:id` | GET  | View article by category |
+|`/signup`       | POST       | Sign up with new user info |
+|`/signin`       | POST       | Sign in while get an access token based on credentials |
+|`/articles`     | GET        | Get all articles |
+|`/articles`     | POST       | Post new article |
+|`/articles:id`  | GET        | Get / view spesific article |
+|`/articles:id`  | PUT        | Edit article (authenticated user only) |
+|`/articles:id`  | DELETE     | Delete article (authenticated user only) |
+|`/author?q=:id` | GET        | View by author |
+|`/category?q=:id` | GET      | View article by category |

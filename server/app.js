@@ -17,11 +17,11 @@ app.use(bodyParser.json({ type : 'application/x-www-form-urlencoded'}));
 
 const index = require('./routes/index');
 const user = require('./routes/user');
-// const article = require('./routes/article');
+const article = require('./routes/article');
 
 app.use('/', index);
 // app.use('/user', user);
-// app.use('/article', article);
+app.use('/article', article);
 
 
 app.listen(3000, () => console.log('Listening...'))
