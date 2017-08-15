@@ -13,7 +13,16 @@ export const store = new Vuex.Store({
       axios.get('http://localhost:3000/article/')
       .then(articles => {
         console.log(articles);
-        state.articles.push(articles)
+        // state.articles.push(articles)
+      })
+    }
+  },
+  methods: {
+    getAllArticles: function (state) {
+      axios.get('http://localhost:3000/article/')
+      .then(articles => {
+        console.log(articles);
+        // state.articles.push(articles)
       })
     }
   }
