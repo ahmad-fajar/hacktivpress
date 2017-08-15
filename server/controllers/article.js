@@ -51,10 +51,28 @@ exports.viewOne = (req, res) => {
 // view by author
 exports.viewByAuthor = (req, res) => {
   Article.find({
-    author._id : req.params.id
+    author : req.params.id
   })
   .then(article => {
     res.send(article)
+  })
+  .catch(e => {
+    res.status(500).send(article)
+  })
+}
+
+// view by category
+exports.viewByCategory = (req, res) => {
+  Article.find({
+    category : req.params.category
+  })
+  .populate('users', 'username')
+  .exec()
+  .then(article => {
+    res.send(article)
+  })
+  .catch(e => {
+    res.status(500).send(article)
   })
 }
 

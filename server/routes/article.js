@@ -12,6 +12,9 @@ router.post('/', articleCtrl.createArticle);
 router.get('/', articleCtrl.viewAll);
 // by id
 router.get('/:id', articleCtrl.viewOne);
+// by author
+// router.get('/author/:id', articleCtrl.viewByAuthor)
+router.get('/author:q', articleCtrl.viewByAuthor)
 
 // update
 router.put('/:id', articleCtrl.articleUpdate);
