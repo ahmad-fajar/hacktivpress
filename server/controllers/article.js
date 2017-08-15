@@ -48,6 +48,16 @@ exports.viewOne = (req, res) => {
   })
 }
 
+// view by author
+exports.viewByAuthor = (req, res) => {
+  Article.find({
+    author._id : req.params.id
+  })
+  .then(article => {
+    res.send(article)
+  })
+}
+
 
 // update
 exports.articleUpdate = (req, res) => {
@@ -65,6 +75,18 @@ exports.articleUpdate = (req, res) => {
     .catch(e => {
       res.send(e)
     })
+  })
+  .catch(e => {
+    res.status(500).send(e)
+  })
+}
+
+
+// delete
+exports.articleDelete = (req, res) => {
+  Article.findByIdAndRemove(req.params.id)
+  .then(removed => {
+    res.send(removed)
   })
   .catch(e => {
     res.status(500).send(e)

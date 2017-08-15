@@ -16,5 +16,8 @@ router.get('/:id', articleCtrl.viewOne);
 // update
 router.put('/:id', articleCtrl.articleUpdate);
 
+// delete
+router.delete('/:id', articleCtrl.articleDelete);
+
 
 module.exports = router;
